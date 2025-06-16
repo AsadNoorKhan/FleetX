@@ -1,0 +1,142 @@
+[
+    {
+        "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.11.1\\com.valsgroup.fleetx.app-debug-61:\\drawable_ic_notifications.xml.flat",
+        "source": "C:\\Users\\HP\\.gradle\\daemon\\8.11.1\\com.valsgroup.fleetx.app-main-63:\\drawable\\ic_notifications.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.11.1\\com.valsgroup.fleetx.app-debug-61:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\HP\\.gradle\\daemon\\8.11.1\\com.valsgroup.fleetx.app-main-63:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.11.1\\com.valsgroup.fleetx.app-debug-61:\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\HP\\.gradle\\daemon\\8.11.1\\com.valsgroup.fleetx.app-main-63:\\mipmap-xhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.11.1\\com.valsgroup.fleetx.app-debug-61:\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\HP\\.gradle\\daemon\\8.11.1\\com.valsgroup.fleetx.app-main-63:\\mipmap-mdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.11.1\\com.valsgroup.fleetx.app-debug-61:\\drawable_otp_input_selected.xml.flat",
+        "source": "C:\\Users\\HP\\.gradle\\daemon\\8.11.1\\com.valsgroup.fleetx.app-main-63:\\drawable\\otp_input_selected.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.11.1\\com.valsgroup.fleetx.app-debug-61:\\drawable_ic_arrow_back.xml.flat",
+        "source": "C:\\Users\\HP\\.gradle\\daemon\\8.11.1\\com.valsgroup.fleetx.app-main-63:\\drawable\\ic_arrow_back.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.11.1\\com.valsgroup.fleetx.app-debug-61:\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\HP\\.gradle\\daemon\\8.11.1\\com.valsgroup.fleetx.app-main-63:\\mipmap-hdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.11.1\\com.valsgroup.fleetx.app-debug-61:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\HP\\.gradle\\daemon\\8.11.1\\com.valsgroup.fleetx.app-main-63:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.11.1\\com.valsgroup.fleetx.app-debug-61:\\layout_fragment_register.xml.flat",
+        "source": "C:\\Users\\HP\\.gradle\\daemon\\8.11.1\\com.valsgroup.fleetx.app-main-63:\\layout\\fragment_register.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.11.1\\com.valsgroup.fleetx.app-debug-61:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\HP\\.gradle\\daemon\\8.11.1\\com.valsgroup.fleetx.app-main-63:\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.11.1\\com.valsgroup.fleetx.app-debug-61:\\drawable_otp_input_background.xml.flat",
+        "source": "C:\\Users\\HP\\.gradle\\daemon\\8.11.1\\com.valsgroup.fleetx.app-main-63:\\drawable\\otp_input_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.11.1\\com.valsgroup.fleetx.app-debug-61:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\HP\\.gradle\\daemon\\8.11.1\\com.valsgroup.fleetx.app-main-63:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.11.1\\com.valsgroup.fleetx.app-debug-61:\\layout_fragment_otp_verification.xml.flat",
+        "source": "C:\\Users\\HP\\.gradle\\daemon\\8.11.1\\com.valsgroup.fleetx.app-main-63:\\layout\\fragment_otp_verification.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.11.1\\com.valsgroup.fleetx.app-debug-61:\\drawable_circle_background.xml.flat",
+        "source": "C:\\Users\\HP\\.gradle\\daemon\\8.11.1\\com.valsgroup.fleetx.app-main-63:\\drawable\\circle_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.11.1\\com.valsgroup.fleetx.app-debug-61:\\layout_fragment_create_password.xml.flat",
+        "source": "C:\\Users\\HP\\.gradle\\daemon\\8.11.1\\com.valsgroup.fleetx.app-main-63:\\layout\\fragment_create_password.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.11.1\\com.valsgroup.fleetx.app-debug-61:\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\HP\\.gradle\\daemon\\8.11.1\\com.valsgroup.fleetx.app-main-63:\\mipmap-mdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.11.1\\com.valsgroup.fleetx.app-debug-61:\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\HP\\.gradle\\daemon\\8.11.1\\com.valsgroup.fleetx.app-main-63:\\mipmap-xxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.11.1\\com.valsgroup.fleetx.app-debug-61:\\drawable_keypad_button_background.xml.flat",
+        "source": "C:\\Users\\HP\\.gradle\\daemon\\8.11.1\\com.valsgroup.fleetx.app-main-63:\\drawable\\keypad_button_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.11.1\\com.valsgroup.fleetx.app-debug-61:\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\HP\\.gradle\\daemon\\8.11.1\\com.valsgroup.fleetx.app-main-63:\\mipmap-hdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.11.1\\com.valsgroup.fleetx.app-debug-61:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\HP\\.gradle\\daemon\\8.11.1\\com.valsgroup.fleetx.app-main-63:\\xml\\data_extraction_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.11.1\\com.valsgroup.fleetx.app-debug-61:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\HP\\.gradle\\daemon\\8.11.1\\com.valsgroup.fleetx.app-main-63:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.11.1\\com.valsgroup.fleetx.app-debug-61:\\drawable_button_background_orange.xml.flat",
+        "source": "C:\\Users\\HP\\.gradle\\daemon\\8.11.1\\com.valsgroup.fleetx.app-main-63:\\drawable\\button_background_orange.xml"
+    },
+    {
+        "merged": "com.valsgroup.fleetx.app-debug-61:/layout_fragment_create_password.xml.flat",
+        "source": "com.valsgroup.fleetx.app-main-63:/layout/fragment_create_password.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.11.1\\com.valsgroup.fleetx.app-debug-61:\\drawable_ic_lock.xml.flat",
+        "source": "C:\\Users\\HP\\.gradle\\daemon\\8.11.1\\com.valsgroup.fleetx.app-main-63:\\drawable\\ic_lock.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.11.1\\com.valsgroup.fleetx.app-debug-61:\\drawable_ic_visibility_off.xml.flat",
+        "source": "C:\\Users\\HP\\.gradle\\daemon\\8.11.1\\com.valsgroup.fleetx.app-main-63:\\drawable\\ic_visibility_off.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.11.1\\com.valsgroup.fleetx.app-debug-61:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\HP\\.gradle\\daemon\\8.11.1\\com.valsgroup.fleetx.app-main-63:\\mipmap-xhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.11.1\\com.valsgroup.fleetx.app-debug-61:\\layout_activity_auth.xml.flat",
+        "source": "C:\\Users\\HP\\.gradle\\daemon\\8.11.1\\com.valsgroup.fleetx.app-main-63:\\layout\\activity_auth.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.11.1\\com.valsgroup.fleetx.app-debug-61:\\drawable_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\HP\\.gradle\\daemon\\8.11.1\\com.valsgroup.fleetx.app-main-63:\\drawable\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.11.1\\com.valsgroup.fleetx.app-debug-61:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\HP\\.gradle\\daemon\\8.11.1\\com.valsgroup.fleetx.app-main-63:\\xml\\backup_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.11.1\\com.valsgroup.fleetx.app-debug-61:\\drawable_input_background.xml.flat",
+        "source": "C:\\Users\\HP\\.gradle\\daemon\\8.11.1\\com.valsgroup.fleetx.app-main-63:\\drawable\\input_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.11.1\\com.valsgroup.fleetx.app-debug-61:\\layout_fragment_login.xml.flat",
+        "source": "C:\\Users\\HP\\.gradle\\daemon\\8.11.1\\com.valsgroup.fleetx.app-main-63:\\layout\\fragment_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.11.1\\com.valsgroup.fleetx.app-debug-61:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\HP\\.gradle\\daemon\\8.11.1\\com.valsgroup.fleetx.app-main-63:\\mipmap-xxxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.11.1\\com.valsgroup.fleetx.app-debug-61:\\drawable_ic_email.xml.flat",
+        "source": "C:\\Users\\HP\\.gradle\\daemon\\8.11.1\\com.valsgroup.fleetx.app-main-63:\\drawable\\ic_email.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.11.1\\com.valsgroup.fleetx.app-debug-61:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\HP\\.gradle\\daemon\\8.11.1\\com.valsgroup.fleetx.app-main-63:\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.11.1\\com.valsgroup.fleetx.app-debug-61:\\drawable_ic_person.xml.flat",
+        "source": "C:\\Users\\HP\\.gradle\\daemon\\8.11.1\\com.valsgroup.fleetx.app-main-63:\\drawable\\ic_person.xml"
+    }
+]

@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">FleetX</string>
+    
+    <!-- Login Screen -->
+    <string name="login">Login</string>
+    <string name="welcome">Welcome</string>
+    <string name="login_subtitle">Please enter your email and password to sign up</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="remember_me">Remember me</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="dont_have_account">Don\'t have an account?</string>
+    <string name="register">Register</string>
+    
+    <!-- Register Screen -->
+    <string name="create_account">Create Account</string>
+    <string name="register_subtitle">Create your account to explore coffee</string>
+    <string name="name">Name</string>
+    <string name="register_with_email">Register with Email</string>
+    <string name="name_hint">Ex: John Doe</string>
+    <string name="email_hint">Ex:coffee@gmail.com</string>
+    
+    <!-- OTP Verification Screen -->
+    <string name="verification">Verification</string>
+    <string name="otp_title">OTP Code Verification</string>
+    <string name="otp_subtitle">We have sent an OTP code to your email\nEx:coffee@gmail.com</string>
+    <string name="didnt_receive_email">Didn\'t receive email?</string>
+    <string name="resend_code">You can resend code in %1$ds</string>
+    <string name="confirm">Confirm</string>
+    
+    <!-- Create New Password Screen -->
+    <string name="create_new_password">Create New Password</string>
+    <string name="password_subtitle">Create your new password.</string>
+    <string name="new_password">New Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="continue_text">Continue</string>
+    <string name="password_hint">Input your password</string>
+    
+    <!-- Common -->
+    <string name="back">Back</string>
+    <string name="next">Next</string>
+</resources>

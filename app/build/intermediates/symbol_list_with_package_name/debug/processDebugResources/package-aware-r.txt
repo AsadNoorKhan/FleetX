@@ -1370,6 +1370,7 @@ color accent_material_dark
 color accent_material_light
 color androidx_core_ripple_material_light
 color androidx_core_secondary_text_default_material_light
+color app_icon_background
 color background_floating_material_dark
 color background_floating_material_light
 color background_material_dark
@@ -3902,6 +3903,9 @@ layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
+mipmap app_icon
+mipmap app_icon_foreground
+mipmap app_icon_round
 mipmap ic_launcher
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description

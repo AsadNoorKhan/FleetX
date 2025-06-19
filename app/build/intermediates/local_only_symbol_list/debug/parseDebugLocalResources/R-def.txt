@@ -1,5 +1,6 @@
 R_DEF: Internal format may change without notice
 local
+color app_icon_background
 color black
 color gray_border
 color gray_dark
@@ -84,6 +85,9 @@ layout fragment_create_password
 layout fragment_login
 layout fragment_otp_verification
 layout fragment_register
+mipmap app_icon
+mipmap app_icon_foreground
+mipmap app_icon_round
 mipmap ic_launcher
 mipmap ic_launcher_round
 string app_name

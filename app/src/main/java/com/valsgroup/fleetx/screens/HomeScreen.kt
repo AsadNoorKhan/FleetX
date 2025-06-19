@@ -118,36 +118,51 @@ fun HomeScreen() {
             totalIdle = "65 Hours",
             fuelWaste = "124 Liters"
         )
-        // AC Misuse, Stay In Zone, Stay Away From Zone, Temperature (row)
-        Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+        // AC Misuse, Stay In Zone (row)
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.spacedBy(12.dp)
+        ) {
             AcMisuseCard(
                 title = "AC Misuse",
                 fuelWaste = "0 Litters",
                 hours = "0",
                 percent = "0%",
-                modifier = Modifier.weight(1f)
+                modifier = Modifier
+                    .weight(1f)
+                    .height(180.dp)
             )
             StayInZoneCard(
                 title = "Stay In Zone",
                 fuelWaste = "0 Litters",
                 hours = "0",
                 percent = "57%",
-                modifier = Modifier.weight(1f)
+                modifier = Modifier
+                    .weight(1f)
+                    .height(180.dp)
             )
         }
-        Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+        // Stay Away Zone, Temperature (row)
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.spacedBy(12.dp)
+        ) {
             StayAwayZoneCard(
                 title = "Stay Away From Zone",
                 alerts = "0",
                 percent = "0%",
-                modifier = Modifier.weight(1f)
+                modifier = Modifier
+                    .weight(1f)
+                    .height(180.dp)
             )
             TemperatureCard(
                 title = "Temperature",
                 min = "25.0 C",
                 max = "84.8 C",
                 percent = "0%",
-                modifier = Modifier.weight(1f)
+                modifier = Modifier
+                    .weight(1f)
+                    .height(180.dp)
             )
         }
         // Object Mode

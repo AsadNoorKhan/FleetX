@@ -53,4 +53,7 @@
         <item name="colorOnSurface">@color/black</item>
     </style>
     <style name="Theme.FleetX" parent="Base.Theme.FleetX"/>
+    <style name="Theme.FleetX.Launcher" parent="Theme.FleetX">
+        <item name="android:windowBackground">@drawable/splash_screen</item>
+    </style>
 </resources>

@@ -23,6 +23,7 @@ drawable input_background
 drawable keypad_button_background
 drawable otp_input_background
 drawable otp_input_selected
+drawable splash_screen
 id auth_container
 id backButton
 id btn0
@@ -122,5 +123,6 @@ string verification
 string welcome
 style Base.Theme.FleetX
 style Theme.FleetX
+style Theme.FleetX.Launcher
 xml backup_rules
 xml data_extraction_rules

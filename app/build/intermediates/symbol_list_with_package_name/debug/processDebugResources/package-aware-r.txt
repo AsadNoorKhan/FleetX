@@ -3127,6 +3127,7 @@ drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable otp_input_background
 drawable otp_input_selected
+drawable splash_screen
 drawable test_level_drawable
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
@@ -4740,6 +4741,7 @@ style Theme_Design_Light_BottomSheetDialog
 style Theme_Design_Light_NoActionBar
 style Theme_Design_NoActionBar
 style Theme_FleetX
+style Theme_FleetX_Launcher
 style Theme_Material3_Dark
 style Theme_Material3_Dark_BottomSheetDialog
 style Theme_Material3_Dark_Dialog

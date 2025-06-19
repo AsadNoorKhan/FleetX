@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.FleetX" parent="Theme.Material3.DayNight.NoActionBar">
@@ -15,4 +16,9 @@
     </style>
 
     <style name="Theme.FleetX" parent="Base.Theme.FleetX" />
+
+    <!-- Launcher theme for instant splash -->
+    <style name="Theme.FleetX.Launcher" parent="Theme.FleetX">
+        <item name="android:windowBackground">@drawable/splash_screen</item>
+    </style>
 </resources>

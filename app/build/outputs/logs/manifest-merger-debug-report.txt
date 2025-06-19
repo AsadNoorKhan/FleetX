@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\HP\AndroidStudioProjects\FleetX\app\src\main\AndroidManifest.xml:2:1-33:12
-INJECTED from C:\Users\HP\AndroidStudioProjects\FleetX\app\src\main\AndroidManifest.xml:2:1-33:12
-INJECTED from C:\Users\HP\AndroidStudioProjects\FleetX\app\src\main\AndroidManifest.xml:2:1-33:12
-INJECTED from C:\Users\HP\AndroidStudioProjects\FleetX\app\src\main\AndroidManifest.xml:2:1-33:12
+ADDED from C:\Users\HP\AndroidStudioProjects\FleetX\app\src\main\AndroidManifest.xml:2:1-39:12
+INJECTED from C:\Users\HP\AndroidStudioProjects\FleetX\app\src\main\AndroidManifest.xml:2:1-39:12
+INJECTED from C:\Users\HP\AndroidStudioProjects\FleetX\app\src\main\AndroidManifest.xml:2:1-39:12
+INJECTED from C:\Users\HP\AndroidStudioProjects\FleetX\app\src\main\AndroidManifest.xml:2:1-39:12
 MERGED from [com.google.android.material:material:1.12.0] C:\Users\HP\.gradle\caches\8.11.1\transforms\b52991ae8bd33fd66d40674d6d6bb0b4\transformed\material-1.12.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.2.1] C:\Users\HP\.gradle\caches\8.11.1\transforms\ede7d235a1b23d95bd3dba94c8699966\transformed\constraintlayout-2.2.1\AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.appcompat:appcompat-resources:1.7.1] C:\Users\HP\.gradle\caches\8.11.1\transforms\82a042eac5a788eb99ec5d0567965a47\transformed\appcompat-resources-1.7.1\AndroidManifest.xml:2:1-7:12
@@ -87,8 +87,8 @@ MERGED from [androidx.annotation:annotation-experimental:1.4.1] C:\Users\HP\.gra
 	xmlns:android
 		ADDED from C:\Users\HP\AndroidStudioProjects\FleetX\app\src\main\AndroidManifest.xml:2:11-69
 application
-ADDED from C:\Users\HP\AndroidStudioProjects\FleetX\app\src\main\AndroidManifest.xml:5:5-31:19
-INJECTED from C:\Users\HP\AndroidStudioProjects\FleetX\app\src\main\AndroidManifest.xml:5:5-31:19
+ADDED from C:\Users\HP\AndroidStudioProjects\FleetX\app\src\main\AndroidManifest.xml:5:5-37:19
+INJECTED from C:\Users\HP\AndroidStudioProjects\FleetX\app\src\main\AndroidManifest.xml:5:5-37:19
 MERGED from [com.google.android.material:material:1.12.0] C:\Users\HP\.gradle\caches\8.11.1\transforms\b52991ae8bd33fd66d40674d6d6bb0b4\transformed\material-1.12.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.12.0] C:\Users\HP\.gradle\caches\8.11.1\transforms\b52991ae8bd33fd66d40674d6d6bb0b4\transformed\material-1.12.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.2.1] C:\Users\HP\.gradle\caches\8.11.1\transforms\ede7d235a1b23d95bd3dba94c8699966\transformed\constraintlayout-2.2.1\AndroidManifest.xml:7:5-20
@@ -129,28 +129,36 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\HP
 		ADDED from C:\Users\HP\AndroidStudioProjects\FleetX\app\src\main\AndroidManifest.xml:13:9-44
 	android:dataExtractionRules
 		ADDED from C:\Users\HP\AndroidStudioProjects\FleetX\app\src\main\AndroidManifest.xml:7:9-65
-activity#com.valsgroup.fleetx.AuthActivity
-ADDED from C:\Users\HP\AndroidStudioProjects\FleetX\app\src\main\AndroidManifest.xml:17:9-24:20
+activity#com.valsgroup.fleetx.SplashActivity
+ADDED from C:\Users\HP\AndroidStudioProjects\FleetX\app\src\main\AndroidManifest.xml:17:9-25:20
 	android:exported
 		ADDED from C:\Users\HP\AndroidStudioProjects\FleetX\app\src\main\AndroidManifest.xml:19:13-36
+	android:theme
+		ADDED from C:\Users\HP\AndroidStudioProjects\FleetX\app\src\main\AndroidManifest.xml:20:13-57
 	android:name
-		ADDED from C:\Users\HP\AndroidStudioProjects\FleetX\app\src\main\AndroidManifest.xml:18:13-41
+		ADDED from C:\Users\HP\AndroidStudioProjects\FleetX\app\src\main\AndroidManifest.xml:18:13-43
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\HP\AndroidStudioProjects\FleetX\app\src\main\AndroidManifest.xml:20:13-23:29
+ADDED from C:\Users\HP\AndroidStudioProjects\FleetX\app\src\main\AndroidManifest.xml:21:13-24:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\HP\AndroidStudioProjects\FleetX\app\src\main\AndroidManifest.xml:21:17-69
+ADDED from C:\Users\HP\AndroidStudioProjects\FleetX\app\src\main\AndroidManifest.xml:22:17-69
 	android:name
-		ADDED from C:\Users\HP\AndroidStudioProjects\FleetX\app\src\main\AndroidManifest.xml:21:25-66
+		ADDED from C:\Users\HP\AndroidStudioProjects\FleetX\app\src\main\AndroidManifest.xml:22:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\HP\AndroidStudioProjects\FleetX\app\src\main\AndroidManifest.xml:22:17-77
+ADDED from C:\Users\HP\AndroidStudioProjects\FleetX\app\src\main\AndroidManifest.xml:23:17-77
 	android:name
-		ADDED from C:\Users\HP\AndroidStudioProjects\FleetX\app\src\main\AndroidManifest.xml:22:27-74
-activity#com.valsgroup.fleetx.MainActivity
-ADDED from C:\Users\HP\AndroidStudioProjects\FleetX\app\src\main\AndroidManifest.xml:27:9-29:40
+		ADDED from C:\Users\HP\AndroidStudioProjects\FleetX\app\src\main\AndroidManifest.xml:23:27-74
+activity#com.valsgroup.fleetx.AuthActivity
+ADDED from C:\Users\HP\AndroidStudioProjects\FleetX\app\src\main\AndroidManifest.xml:28:9-30:39
 	android:exported
-		ADDED from C:\Users\HP\AndroidStudioProjects\FleetX\app\src\main\AndroidManifest.xml:29:13-37
+		ADDED from C:\Users\HP\AndroidStudioProjects\FleetX\app\src\main\AndroidManifest.xml:30:13-36
 	android:name
-		ADDED from C:\Users\HP\AndroidStudioProjects\FleetX\app\src\main\AndroidManifest.xml:28:13-41
+		ADDED from C:\Users\HP\AndroidStudioProjects\FleetX\app\src\main\AndroidManifest.xml:29:13-41
+activity#com.valsgroup.fleetx.MainActivity
+ADDED from C:\Users\HP\AndroidStudioProjects\FleetX\app\src\main\AndroidManifest.xml:33:9-35:40
+	android:exported
+		ADDED from C:\Users\HP\AndroidStudioProjects\FleetX\app\src\main\AndroidManifest.xml:35:13-37
+	android:name
+		ADDED from C:\Users\HP\AndroidStudioProjects\FleetX\app\src\main\AndroidManifest.xml:34:13-41
 uses-sdk
 INJECTED from C:\Users\HP\AndroidStudioProjects\FleetX\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\HP\AndroidStudioProjects\FleetX\app\src\main\AndroidManifest.xml

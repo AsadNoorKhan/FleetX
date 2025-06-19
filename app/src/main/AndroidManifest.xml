@@ -13,15 +13,21 @@
         android:theme="@style/Theme.FleetX"
         tools:targetApi="31">
         
-        <!-- AuthActivity as launcher -->
+        <!-- SplashActivity as launcher -->
         <activity
-            android:name=".AuthActivity"
-            android:exported="true">
+            android:name=".SplashActivity"
+            android:exported="true"
+            android:theme="@style/Theme.FleetX.Launcher">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        
+        <!-- AuthActivity -->
+        <activity
+            android:name=".AuthActivity"
+            android:exported="true" />
         
         <!-- MainActivity -->
         <activity

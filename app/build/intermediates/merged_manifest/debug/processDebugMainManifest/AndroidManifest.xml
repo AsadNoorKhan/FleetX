@@ -28,16 +28,22 @@
         android:testOnly="true"
         android:theme="@style/Theme.FleetX" >
 
-        <!-- AuthActivity as launcher -->
+        <!-- SplashActivity as launcher -->
         <activity
-            android:name="com.valsgroup.fleetx.AuthActivity"
-            android:exported="true" >
+            android:name="com.valsgroup.fleetx.SplashActivity"
+            android:exported="true"
+            android:theme="@style/Theme.FleetX.Launcher" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- AuthActivity -->
+        <activity
+            android:name="com.valsgroup.fleetx.AuthActivity"
+            android:exported="true" />
 
         <!-- MainActivity -->
         <activity

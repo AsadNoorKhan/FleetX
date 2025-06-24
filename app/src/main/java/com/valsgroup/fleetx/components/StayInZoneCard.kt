@@ -6,6 +6,7 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -13,10 +14,15 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.compose.foundation.Image
+import androidx.compose.ui.res.painterResource
+import com.valsgroup.fleetx.R
+import androidx.compose.ui.graphics.painter.Painter
 
 @Composable
 fun StayInZoneCard(
@@ -24,6 +30,7 @@ fun StayInZoneCard(
     fuelWaste: String,
     hours: String,
     percent: String,
+    painter: Painter,
     modifier: Modifier = Modifier
 ) {
     Card(
@@ -34,12 +41,10 @@ fun StayInZoneCard(
     ) {
         Column(modifier = Modifier.padding(16.dp)) {
             Row(verticalAlignment = Alignment.CenterVertically) {
-                // Placeholder for zone icon
-                Box(
-                    modifier = Modifier
-                        .size(28.dp)
-                        .clip(CircleShape)
-                        .background(Color(0xFF388E3C))
+                Image(
+                    painter = painter,
+                    contentDescription = "Stay In Zone Icon",
+                    modifier = Modifier.size(28.dp)
                 )
                 Spacer(modifier = Modifier.width(8.dp))
                 Text(
@@ -87,13 +92,20 @@ fun StayInZoneCard(
                         modifier = Modifier.padding(horizontal = 12.dp, vertical = 4.dp),
                         verticalAlignment = Alignment.CenterVertically
                     ) {
-                        // Placeholder for zone icon
                         Box(
                             modifier = Modifier
-                                .size(20.dp)
+                                .size(24.dp)
                                 .clip(CircleShape)
-                                .background(Color(0xFF388E3C))
-                        )
+                                .background(Color(0xFFE0E0E0)),
+                            contentAlignment = Alignment.Center
+                        ) {
+                            Image(
+                                painter = painterResource(id = R.drawable.stay_in_zone),
+                                contentDescription = "Stay In Zone Pill Icon",
+                                modifier = Modifier.size(16.dp),
+                                contentScale = ContentScale.Fit
+                            )
+                        }
                         Spacer(modifier = Modifier.width(8.dp))
                         Text(
                             text = percent + " Object",
@@ -114,6 +126,7 @@ fun StayInZoneCardPreview() {
         title = "Stay In Zone",
         fuelWaste = "0 Litters",
         hours = "0",
-        percent = "57%"
+        percent = "57%",
+        painter = androidx.compose.ui.res.painterResource(android.R.drawable.ic_menu_info_details)
     )
-} 
+}

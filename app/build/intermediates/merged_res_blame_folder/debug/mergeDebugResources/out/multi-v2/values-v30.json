@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.valsgroup.fleetx.app-mergeDebugResources-59:/values-v30/values-v30.xml",
+            "outputFile": "com.valsgroup.fleetx.app-mergeDebugResources-63:/values-v30/values-v30.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\HP\\.gradle\\caches\\8.11.1\\transforms\\0986400d317209ba27b4ea1183fb223e\\transformed\\material3-release\\res\\values-v30\\values-v30.xml",
+                    "source": "C:\\Users\\HP\\.gradle\\caches\\8.11.1\\transforms\\f0d8ae2894432ed8e064df23a11b2768\\transformed\\material3-release\\res\\values-v30\\values-v30.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

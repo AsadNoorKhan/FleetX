@@ -63,4 +63,8 @@ dependencies {
     
     // Compose Testing
     debugImplementation(libs.androidx.compose.ui.tooling)
+
+    // Google Maps Compose
+    implementation(libs.google.maps.compose)
+    implementation(libs.google.play.services.maps)
 }

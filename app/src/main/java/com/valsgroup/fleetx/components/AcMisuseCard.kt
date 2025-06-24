@@ -6,6 +6,7 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -13,11 +14,16 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.compose.foundation.Image
+import androidx.compose.ui.res.painterResource
+import com.valsgroup.fleetx.R
+import androidx.compose.ui.graphics.ColorFilter
+import androidx.compose.ui.graphics.painter.Painter
 
 @Composable
 fun AcMisuseCard(
@@ -25,6 +31,7 @@ fun AcMisuseCard(
     fuelWaste: String,
     hours: String,
     percent: String,
+    painter: Painter,
     modifier: Modifier = Modifier
 ) {
     Card(
@@ -35,12 +42,10 @@ fun AcMisuseCard(
     ) {
         Column(modifier = Modifier.padding(16.dp)) {
             Row(verticalAlignment = Alignment.CenterVertically) {
-                // Placeholder for AC icon
-                Box(
-                    modifier = Modifier
-                        .size(28.dp)
-                        .clip(CircleShape)
-                        .background(Color(0xFF00838F))
+                Image(
+                    painter = painter,
+                    contentDescription = "AC Misuse Icon",
+                    modifier = Modifier.size(28.dp)
                 )
                 Spacer(modifier = Modifier.width(8.dp))
                 Text(
@@ -88,13 +93,20 @@ fun AcMisuseCard(
                         modifier = Modifier.padding(horizontal = 12.dp, vertical = 4.dp),
                         verticalAlignment = Alignment.CenterVertically
                     ) {
-                        // Placeholder for AC icon
                         Box(
                             modifier = Modifier
-                                .size(20.dp)
+                                .size(24.dp)
                                 .clip(CircleShape)
-                                .background(Color(0xFF00838F))
-                        )
+                                .background(Color(0xFFE0E0E0)),
+                            contentAlignment = Alignment.Center
+                        ) {
+                            Image(
+                                painter = painterResource(id = R.drawable.ac_misuse),
+                                contentDescription = "AC Misuse Pill Icon",
+                                modifier = Modifier.size(16.dp),
+                                contentScale = ContentScale.Fit
+                            )
+                        }
                         Spacer(modifier = Modifier.width(8.dp))
                         Text(
                             text = percent + " Object",
@@ -115,6 +127,7 @@ fun AcMisuseCardPreview() {
         title = "AC Misuse",
         fuelWaste = "0 Litters",
         hours = "0",
-        percent = "0%"
+        percent = "0%",
+        painter = androidx.compose.ui.res.painterResource(R.drawable.ac_misuse)
     )
-} 
+}

@@ -1,5 +1,6 @@
 package com.valsgroup.fleetx.components
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
@@ -8,6 +9,8 @@ import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
+import androidx.compose.ui.res.painterResource
+import com.valsgroup.fleetx.R
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -34,12 +37,12 @@ fun FleetStatusMini(modifier: Modifier = Modifier) {
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Center
         ) {
-            // Placeholder for icon
-            Box(
+            Image(
+                painter = painterResource(id = R.drawable.status),
+                contentDescription = "Status Icon",
                 modifier = Modifier
                     .size(28.dp)
                     .clip(RoundedCornerShape(6.dp))
-                    .background(Color(0xFFFF5722))
             )
             Spacer(modifier = Modifier.height(8.dp))
             Text(
@@ -55,4 +58,4 @@ fun FleetStatusMini(modifier: Modifier = Modifier) {
 @androidx.compose.ui.tooling.preview.Preview(showBackground = true)
 fun FleetStatusMiniPreview() {
     FleetStatusMini()
-} 
+}

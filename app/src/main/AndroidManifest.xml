@@ -24,6 +24,11 @@
             </intent-filter>
         </activity>
         
+        <!-- OnboardingActivity -->
+        <activity
+            android:name=".OnboardingActivity"
+            android:exported="false" />
+        
         <!-- AuthActivity -->
         <activity
             android:name=".AuthActivity"

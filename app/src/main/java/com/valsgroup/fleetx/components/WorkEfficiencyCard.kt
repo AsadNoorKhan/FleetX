@@ -20,12 +20,15 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.valsgroup.fleetx.ui.theme.OrangePrimary
 import com.valsgroup.fleetx.ui.theme.White
+import androidx.compose.foundation.Image
+import androidx.compose.ui.graphics.painter.Painter
 
 @Composable
 fun WorkEfficiencyCard(
     label: String,
     value: String,
     progress: Float,
+    painter: Painter,
     modifier: Modifier = Modifier
 ) {
     Card(
@@ -36,12 +39,10 @@ fun WorkEfficiencyCard(
     ) {
         Column(modifier = Modifier.padding(16.dp)) {
             Row(verticalAlignment = Alignment.CenterVertically) {
-                // Placeholder for efficiency icon
-                Box(
-                    modifier = Modifier
-                        .size(32.dp)
-                        .clip(CircleShape)
-                        .background(Color(0xFF26C485))
+                Image(
+                    painter = painter,
+                    contentDescription = "Work Efficiency Icon",
+                    modifier = Modifier.size(32.dp)
                 )
                 Spacer(modifier = Modifier.width(8.dp))
                 Text(
@@ -68,12 +69,10 @@ fun WorkEfficiencyCard(
                         .padding(horizontal = 8.dp, vertical = 8.dp),
                     verticalAlignment = Alignment.CenterVertically
                 ) {
-                    // Placeholder for efficiency icon
-                    Box(
-                        modifier = Modifier
-                            .size(28.dp)
-                            .clip(CircleShape)
-                            .background(Color(0xFF26C485))
+                    Image(
+                        painter = painter,
+                        contentDescription = "Work Efficiency Icon",
+                        modifier = Modifier.size(28.dp)
                     )
                     Spacer(modifier = Modifier.width(8.dp))
                     Text(
@@ -118,6 +117,7 @@ fun WorkEfficiencyCardPreview() {
     WorkEfficiencyCard(
         label = "Work Efficiency",
         value = "12 hrs",
-        progress = 0.85f
+        progress = 0.85f,
+        painter = androidx.compose.ui.res.painterResource(android.R.drawable.ic_menu_info_details)
     )
 } 

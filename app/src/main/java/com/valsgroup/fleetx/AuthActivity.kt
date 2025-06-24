@@ -10,10 +10,22 @@ import com.valsgroup.fleetx.auth.OtpVerificationFragment
 import com.valsgroup.fleetx.auth.CreatePasswordFragment
 
 class AuthActivity : AppCompatActivity() {
+    private val backPressedCallback = object : androidx.activity.OnBackPressedCallback(true) {
+        override fun handleOnBackPressed() {
+            if (supportFragmentManager.backStackEntryCount > 0) {
+                supportFragmentManager.popBackStack()
+            } else {
+                finish()
+            }
+        }
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_auth)
+
+        // Add back press callback
+        onBackPressedDispatcher.addCallback(this, backPressedCallback)
 
         // Check if user is already logged in
         if (NavigationManager.isLoggedIn(this)) {
@@ -39,12 +51,4 @@ class AuthActivity : AppCompatActivity() {
             .addToBackStack(null)
             .commit()
     }
-
-    override fun onBackPressed() {
-        if (supportFragmentManager.backStackEntryCount > 0) {
-            supportFragmentManager.popBackStack()
-        } else {
-            super.onBackPressed()
-        }
-    }
-} 
+}

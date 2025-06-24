@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.valsgroup.fleetx.app-mergeDebugResources-59:/values-h360dp-land-v13/values-h360dp-land-v13.xml",
+            "outputFile": "com.valsgroup.fleetx.app-mergeDebugResources-63:/values-h360dp-land-v13/values-h360dp-land-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\HP\\.gradle\\caches\\8.11.1\\transforms\\b52991ae8bd33fd66d40674d6d6bb0b4\\transformed\\material-1.12.0\\res\\values-h360dp-land-v13\\values-h360dp-land-v13.xml",
+                    "source": "C:\\Users\\HP\\.gradle\\caches\\8.11.1\\transforms\\04d28135693f461ed3bbe0a392fcd5b0\\transformed\\material-1.12.0\\res\\values-h360dp-land-v13\\values-h360dp-land-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10",
                         "startColumns": "4,4,4,4,4,4,4,4,4",

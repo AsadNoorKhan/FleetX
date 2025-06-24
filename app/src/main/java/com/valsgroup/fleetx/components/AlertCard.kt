@@ -20,12 +20,15 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.valsgroup.fleetx.ui.theme.OrangePrimary
 import com.valsgroup.fleetx.ui.theme.White
+import androidx.compose.foundation.Image
+import androidx.compose.ui.graphics.painter.Painter
 
 @Composable
 fun AlertCard(
     label: String,
     sublabel: String,
     value: String,
+    painter: Painter,
     modifier: Modifier = Modifier
 ) {
     Card(
@@ -36,12 +39,10 @@ fun AlertCard(
     ) {
         Column(modifier = Modifier.padding(16.dp)) {
             Row(verticalAlignment = Alignment.CenterVertically) {
-                // Placeholder for alert icon
-                Box(
-                    modifier = Modifier
-                        .size(32.dp)
-                        .clip(CircleShape)
-                        .background(Color(0xFFD32F2F))
+                Image(
+                    painter = painter,
+                    contentDescription = "Alert Icon",
+                    modifier = Modifier.size(32.dp)
                 )
                 Spacer(modifier = Modifier.width(8.dp))
                 Text(
@@ -68,12 +69,10 @@ fun AlertCard(
                         .padding(horizontal = 8.dp, vertical = 8.dp),
                     verticalAlignment = Alignment.CenterVertically
                 ) {
-                    // Placeholder for alert icon
-                    Box(
-                        modifier = Modifier
-                            .size(36.dp)
-                            .clip(CircleShape)
-                            .background(Color(0xFFF8F8F8))
+                    Image(
+                        painter = painter,
+                        contentDescription = "Alert Icon",
+                        modifier = Modifier.size(36.dp)
                     )
                     Spacer(modifier = Modifier.width(8.dp))
                     Column(modifier = Modifier.weight(1f)) {
@@ -106,6 +105,7 @@ fun AlertCardPreview() {
     AlertCard(
         label = "Stopped",
         sublabel = "102 Objects",
-        value = "18467"
+        value = "18467",
+        painter = androidx.compose.ui.res.painterResource(android.R.drawable.ic_menu_info_details)
     )
 } 

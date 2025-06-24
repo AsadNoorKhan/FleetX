@@ -16,10 +16,16 @@ class SplashActivity : ComponentActivity() {
             val context = LocalContext.current
             LaunchedEffect(Unit) {
                 delay(2000)
-                if (NavigationManager.isLoggedIn(context)) {
-                    NavigationManager.navigateToMainScreen(context)
-                } else {
-                    NavigationManager.navigateToAuth(context)
+                when {
+                    !NavigationManager.isOnboardingCompleted(context) -> {
+                        NavigationManager.navigateToOnboarding(context)
+                    }
+                    NavigationManager.isLoggedIn(context) -> {
+                        NavigationManager.navigateToMainScreen(context)
+                    }
+                    else -> {
+                        NavigationManager.navigateToAuth(context)
+                    }
                 }
             }
             SplashScreen()

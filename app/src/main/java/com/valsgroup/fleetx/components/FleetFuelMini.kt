@@ -15,9 +15,11 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.compose.foundation.Image
+import androidx.compose.ui.graphics.painter.Painter
 
 @Composable
-fun FleetFuelMini(modifier: Modifier = Modifier) {
+fun FleetFuelMini(modifier: Modifier = Modifier, painter: Painter) {
     Card(
         modifier = modifier
             .width(120.dp)
@@ -34,12 +36,10 @@ fun FleetFuelMini(modifier: Modifier = Modifier) {
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Center
         ) {
-            // Placeholder for icon
-            Box(
-                modifier = Modifier
-                    .size(28.dp)
-                    .clip(RoundedCornerShape(6.dp))
-                    .background(Color(0xFFFFA000))
+            Image(
+                painter = painter,
+                contentDescription = "Fleet Fuel Icon",
+                modifier = Modifier.size(28.dp)
             )
             Spacer(modifier = Modifier.height(8.dp))
             Text(
@@ -54,5 +54,6 @@ fun FleetFuelMini(modifier: Modifier = Modifier) {
 @Composable
 @androidx.compose.ui.tooling.preview.Preview(showBackground = true)
 fun FleetFuelMiniPreview() {
-    FleetFuelMini()
+    // Use a placeholder painter for preview
+    FleetFuelMini(painter = androidx.compose.ui.res.painterResource(android.R.drawable.ic_menu_info_details))
 } 

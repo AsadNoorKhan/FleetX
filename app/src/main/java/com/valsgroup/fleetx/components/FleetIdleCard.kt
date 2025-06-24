@@ -20,11 +20,16 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.valsgroup.fleetx.ui.theme.OrangePrimary
 import com.valsgroup.fleetx.ui.theme.White
+import androidx.compose.foundation.Image
+import androidx.compose.ui.graphics.painter.Painter
 
 @Composable
 fun FleetIdleCard(
     totalIdle: String,
     fuelWaste: String,
+    painter: Painter,
+    idleIconPainter: Painter,
+    fuelWasteIconPainter: Painter,
     modifier: Modifier = Modifier
 ) {
     Card(
@@ -35,12 +40,10 @@ fun FleetIdleCard(
     ) {
         Column(modifier = Modifier.padding(16.dp)) {
             Row(verticalAlignment = Alignment.CenterVertically) {
-                // Placeholder for hourglass icon
-                Box(
-                    modifier = Modifier
-                        .size(32.dp)
-                        .clip(CircleShape)
-                        .background(Color(0xFFFFC107))
+                Image(
+                    painter = painter,
+                    contentDescription = "Idle Icon",
+                    modifier = Modifier.size(32.dp)
                 )
                 Spacer(modifier = Modifier.width(8.dp))
                 Text(
@@ -75,14 +78,14 @@ fun FleetIdleCard(
             Spacer(modifier = Modifier.height(12.dp))
             IdleRow(
                 color = Color(0xFFFFC107),
-                iconColor = Color(0xFFFFC107),
+                iconPainter = idleIconPainter,
                 label = "Total Fleet Idle",
                 value = totalIdle
             )
             Spacer(modifier = Modifier.height(12.dp))
             IdleRow(
                 color = Color(0xFFF44336),
-                iconColor = Color(0xFFF44336),
+                iconPainter = fuelWasteIconPainter,
                 label = "Approx Fuel Waste",
                 value = fuelWaste
             )
@@ -93,7 +96,7 @@ fun FleetIdleCard(
 @Composable
 private fun IdleRow(
     color: Color,
-    iconColor: Color,
+    iconPainter: Painter,
     label: String,
     value: String
 ) {
@@ -104,14 +107,20 @@ private fun IdleRow(
             .background(color),
         verticalAlignment = Alignment.CenterVertically
     ) {
-        // Placeholder for row icon
         Box(
             modifier = Modifier
                 .padding(start = 8.dp)
-                .size(28.dp)
+                .size(32.dp)
                 .clip(CircleShape)
-                .background(White)
-        )
+                .background(White),
+            contentAlignment = Alignment.Center
+        ) {
+            Image(
+                painter = iconPainter,
+                contentDescription = label,
+                modifier = Modifier.size(20.dp)
+            )
+        }
         Spacer(modifier = Modifier.width(8.dp))
         Text(
             text = label,
@@ -133,6 +142,9 @@ private fun IdleRow(
 fun FleetIdleCardPreview() {
     FleetIdleCard(
         totalIdle = "65 Hours",
-        fuelWaste = "124 Liters"
+        fuelWaste = "124 Liters",
+        painter = androidx.compose.ui.res.painterResource(android.R.drawable.ic_menu_info_details),
+        idleIconPainter = androidx.compose.ui.res.painterResource(android.R.drawable.ic_menu_recent_history),
+        fuelWasteIconPainter = androidx.compose.ui.res.painterResource(android.R.drawable.ic_delete)
     )
 } 

@@ -21,6 +21,8 @@ import androidx.compose.ui.unit.sp
 import com.valsgroup.fleetx.ui.theme.OrangePrimary
 import com.valsgroup.fleetx.ui.theme.White
 import com.valsgroup.fleetx.ui.theme.GrayMedium
+import androidx.compose.foundation.Image
+import androidx.compose.ui.graphics.painter.Painter
 
 @Composable
 fun ObjectModeCard(
@@ -35,13 +37,14 @@ fun ObjectModeCard(
     ) {
         Column(modifier = Modifier.padding(16.dp)) {
             Row(verticalAlignment = Alignment.CenterVertically) {
-                // Placeholder for mode icon
-                Box(
-                    modifier = Modifier
-                        .size(32.dp)
-                        .clip(CircleShape)
-                        .background(Color(0xFF2196F3))
-                )
+                // Use the first mode's painter as the main icon
+                if (modes.isNotEmpty()) {
+                    Image(
+                        painter = modes[0].painter,
+                        contentDescription = "Object Mode Icon",
+                        modifier = Modifier.size(32.dp)
+                    )
+                }
                 Spacer(modifier = Modifier.width(8.dp))
                 Text(
                     text = "Object Mode",
@@ -77,12 +80,10 @@ private fun ObjectModeRow(mode: ObjectMode) {
                 .padding(horizontal = 8.dp, vertical = 8.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
-            // Placeholder for mode icon
-            Box(
-                modifier = Modifier
-                    .size(36.dp)
-                    .clip(CircleShape)
-                    .background(Color(0xFFE3F0FF))
+            Image(
+                painter = mode.painter,
+                contentDescription = "Object Mode Row Icon",
+                modifier = Modifier.size(36.dp)
             )
             Spacer(modifier = Modifier.width(12.dp))
             Column(modifier = Modifier.weight(1f)) {
@@ -122,21 +123,23 @@ private fun ObjectModeRow(mode: ObjectMode) {
 data class ObjectMode(
     val label: String,
     val progress: Float, // 0.0 to 1.0
-    val count: String
+    val count: String,
+    val painter: Painter
 )
 
 @Preview(showBackground = true)
 @Composable
 fun ObjectModeCardPreview() {
+    val painter = androidx.compose.ui.res.painterResource(android.R.drawable.ic_menu_info_details)
     ObjectModeCard(
         modes = listOf(
-            ObjectMode("Good To Go", 0.95f, "95"),
-            ObjectMode("On Job", 0.06f, "06"),
-            ObjectMode("Repair", 0.01f, "01"),
-            ObjectMode("Accident", 0.01f, "01"),
-            ObjectMode("Breakdown", 0.01f, "01"),
-            ObjectMode("Private Mode", 0.01f, "01"),
-            ObjectMode("Occupied", 0.01f, "01")
+            ObjectMode("Good To Go", 0.95f, "95", painter),
+            ObjectMode("On Job", 0.06f, "06", painter),
+            ObjectMode("Repair", 0.01f, "01", painter),
+            ObjectMode("Accident", 0.01f, "01", painter),
+            ObjectMode("Breakdown", 0.01f, "01", painter),
+            ObjectMode("Private Mode", 0.01f, "01", painter),
+            ObjectMode("Occupied", 0.01f, "01", painter)
         )
     )
 } 

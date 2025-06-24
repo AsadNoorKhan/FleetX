@@ -21,12 +21,15 @@ import androidx.compose.ui.unit.sp
 import com.valsgroup.fleetx.ui.theme.OrangePrimary
 import com.valsgroup.fleetx.ui.theme.GrayMedium
 import com.valsgroup.fleetx.ui.theme.White
+import androidx.compose.foundation.Image
+import androidx.compose.ui.graphics.painter.Painter
 
 @Composable
 fun FleetUsageCard(
     totalUsage: String,
     avgDistance: String,
     usageData: List<Float>,
+    painter: Painter,
     modifier: Modifier = Modifier
 ) {
     Card(
@@ -37,12 +40,10 @@ fun FleetUsageCard(
     ) {
         Column(modifier = Modifier.padding(16.dp)) {
             Row(verticalAlignment = Alignment.CenterVertically) {
-                // Placeholder for pie chart icon
-                Box(
-                    modifier = Modifier
-                        .size(32.dp)
-                        .clip(CircleShape)
-                        .background(Color(0xFF4CAF50))
+                Image(
+                    painter = painter,
+                    contentDescription = "Fleet Usage Icon",
+                    modifier = Modifier.size(32.dp)
                 )
                 Spacer(modifier = Modifier.width(8.dp))
                 Text(
@@ -150,6 +151,7 @@ fun FleetUsageCardPreview() {
     FleetUsageCard(
         totalUsage = "23049.08 Km",
         avgDistance = "219.52",
-        usageData = listOf(30f, 60f, 45f, 80f, 55f, 40f, 70f, 65f, 90f, 50f, 60f, 75f)
+        usageData = listOf(30f, 60f, 45f, 80f, 55f, 40f, 70f, 65f, 90f, 50f, 60f, 75f),
+        painter = androidx.compose.ui.res.painterResource(android.R.drawable.ic_menu_info_details)
     )
 } 

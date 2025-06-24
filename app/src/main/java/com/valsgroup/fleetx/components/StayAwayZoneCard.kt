@@ -13,16 +13,22 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.compose.foundation.Image
+import androidx.compose.ui.res.painterResource
+import com.valsgroup.fleetx.R
+import androidx.compose.ui.graphics.painter.Painter
 
 @Composable
 fun StayAwayZoneCard(
     title: String,
     alerts: String,
     percent: String,
+    painter: Painter,
     modifier: Modifier = Modifier
 ) {
     Card(
@@ -33,12 +39,10 @@ fun StayAwayZoneCard(
     ) {
         Column(modifier = Modifier.padding(16.dp)) {
             Row(verticalAlignment = Alignment.CenterVertically) {
-                // Placeholder for away/ban icon
-                Box(
-                    modifier = Modifier
-                        .size(28.dp)
-                        .clip(CircleShape)
-                        .background(Color(0xFFD84315))
+                Image(
+                    painter = painter,
+                    contentDescription = "Stay Away Zone Icon",
+                    modifier = Modifier.size(28.dp)
                 )
                 Spacer(modifier = Modifier.width(8.dp))
                 Text(
@@ -58,7 +62,7 @@ fun StayAwayZoneCard(
                 style = MaterialTheme.typography.bodySmall,
                 color = Color.White
             )
-            Spacer(modifier = Modifier.height(16.dp))
+            Spacer(modifier = Modifier.height(50.dp))
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
@@ -75,13 +79,20 @@ fun StayAwayZoneCard(
                         modifier = Modifier.padding(horizontal = 12.dp, vertical = 4.dp),
                         verticalAlignment = Alignment.CenterVertically
                     ) {
-                        // Placeholder for away/ban icon
                         Box(
                             modifier = Modifier
-                                .size(20.dp)
+                                .size(24.dp)
                                 .clip(CircleShape)
-                                .background(Color(0xFFD84315))
-                        )
+                                .background(Color(0xFFE0E0E0)),
+                            contentAlignment = Alignment.Center
+                        ) {
+                            Image(
+                                painter = painterResource(id = R.drawable.stay_away_zone),
+                                contentDescription = "Stay Away Zone Pill Icon",
+                                modifier = Modifier.size(16.dp),
+                                contentScale = ContentScale.Fit
+                            )
+                        }
                         Spacer(modifier = Modifier.width(8.dp))
                         Text(
                             text = percent + " Object",
@@ -101,6 +112,7 @@ fun StayAwayZoneCardPreview() {
     StayAwayZoneCard(
         title = "Stay Away From Zone",
         alerts = "0",
-        percent = "0%"
+        percent = "0%",
+        painter = androidx.compose.ui.res.painterResource(android.R.drawable.ic_menu_info_details)
     )
-} 
+}

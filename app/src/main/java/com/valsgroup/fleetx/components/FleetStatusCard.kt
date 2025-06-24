@@ -1,5 +1,6 @@
 package com.valsgroup.fleetx.components
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
@@ -9,6 +10,8 @@ import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
+import androidx.compose.ui.res.painterResource
+import com.valsgroup.fleetx.R
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -40,8 +43,9 @@ fun FleetStatusCard(
     ) {
         Column(modifier = Modifier.padding(16.dp)) {
             Row(verticalAlignment = Alignment.CenterVertically) {
-                // Placeholder for logo icon
-                Box(
+                Image(
+                    painter = painterResource(id = R.drawable.status),
+                    contentDescription = "Status Icon",
                     modifier = Modifier
                         .size(32.dp)
                         .clip(CircleShape)
@@ -157,8 +161,14 @@ private fun StatusRow(
             .background(color),
         verticalAlignment = Alignment.CenterVertically
     ) {
-        // Placeholder for status icon
-        Box(
+        Image(
+            painter = when (label) {
+                "Running" -> painterResource(id = R.drawable.running)
+                "Idle" -> painterResource(id = R.drawable.hourglass)
+                "Stopped" -> painterResource(id = R.drawable.cross)
+                else -> painterResource(id = R.drawable.stay_away)
+            },
+            contentDescription = "$label Icon",
             modifier = Modifier
                 .padding(start = 8.dp)
                 .size(28.dp)
@@ -197,4 +207,4 @@ fun FleetStatusCardPreview() {
         stopped = 39,
         inactive = 1
     )
-} 
+}

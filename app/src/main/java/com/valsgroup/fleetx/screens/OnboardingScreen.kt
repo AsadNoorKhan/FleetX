@@ -50,7 +50,7 @@ data class OnboardingPageData(
 fun OnboardingScreen(onFinished: () -> Unit) {
     val pages = listOf(
         OnboardingPageData(
-            imageRes = R.drawable.  onboard_img1,
+            imageRes = R.drawable.onboard_img1,
             title = "Ready To Take Control?",
             subtitle = "Stay updated every step of the way with live shipment tracking."
         ),
@@ -97,14 +97,15 @@ fun OnboardingScreen(onFinished: () -> Unit) {
                         .height(56.dp),
                     shape = RoundedCornerShape(12.dp),
                     colors = ButtonDefaults.buttonColors(
-                        containerColor = MaterialTheme.colorScheme.onBackground
+                        containerColor = Color(0xFFFF6B35), // Orange color
+                        contentColor = Color.White
                     )
                 ) {
                     Icon(
                         painter = painterResource(id = R.drawable.ic_person),
                         contentDescription = null,
                         modifier = Modifier.size(24.dp),
-                        tint = MaterialTheme.colorScheme.primary
+                        tint = Color.White
                     )
                     Spacer(modifier = Modifier.width(16.dp))
                     Text(text = "Get Started", fontSize = 18.sp, color = Color.White)
@@ -128,7 +129,8 @@ fun OnboardingScreen(onFinished: () -> Unit) {
                         .height(56.dp),
                     shape = RoundedCornerShape(12.dp),
                     colors = ButtonDefaults.buttonColors(
-                        containerColor = MaterialTheme.colorScheme.onBackground
+                        containerColor = Color(0xFFFF6B35), // Orange color
+                        contentColor = Color.White
                     )
                 ) {
                     Text(text = "Next", fontSize = 18.sp, color = Color.White)
@@ -174,7 +176,7 @@ fun OnboardingPage(pageData: OnboardingPageData) {
                 text = pageData.title,
                 style = MaterialTheme.typography.headlineLarge.copy(
                     fontWeight = FontWeight.Bold,
-                    color = Color.White,
+                    color = Color.Black,
                     textAlign = TextAlign.Center
                 )
             )

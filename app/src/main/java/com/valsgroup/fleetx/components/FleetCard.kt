@@ -1,30 +1,37 @@
 package com.valsgroup.fleetx.components
 
-import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.border
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
-import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
-import androidx.compose.material3.Button
-import androidx.compose.material3.IconButton
-import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.valsgroup.fleetx.ui.theme.OrangePrimary
+import com.valsgroup.fleetx.R
 import com.valsgroup.fleetx.ui.theme.GrayMedium
-import com.valsgroup.fleetx.ui.theme.GrayLight
 import com.valsgroup.fleetx.ui.theme.White
 
 @Composable
@@ -37,13 +44,18 @@ fun FleetCard(
     gpsStatus: String,
     modifier: Modifier = Modifier
 ) {
+    val isGpsConnected = gpsStatus.contains("Connected") && !gpsStatus.contains("Not Connected")
+    val borderColor = if (isGpsConnected) Color(0xFF4CAF50) else Color(0xFFF44336)
+    
     Card(
-        modifier = modifier,
+        modifier = modifier
+            .border(3.dp, borderColor, RoundedCornerShape(16.dp)),
         shape = RoundedCornerShape(16.dp),
         colors = CardDefaults.cardColors(containerColor = White),
         elevation = CardDefaults.cardElevation(defaultElevation = 4.dp)
     ) {
-        Box(modifier = Modifier.padding(16.dp)) {
+        // Main content
+        Box(modifier = Modifier.padding(20.dp)) {
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 verticalAlignment = Alignment.Top
@@ -51,85 +63,83 @@ fun FleetCard(
                 Column(modifier = Modifier.weight(1f)) {
                     Text(
                         text = vehicleNumber,
-                        style = MaterialTheme.typography.titleLarge.copy(fontSize = 22.sp),
+                        style = MaterialTheme.typography.titleLarge.copy(
+                            fontSize = 22.sp,
+                            fontWeight = FontWeight.Bold
+                        ),
                         color = Color.Black
                     )
-                    Spacer(modifier = Modifier.height(4.dp))
+                    Spacer(modifier = Modifier.height(8.dp))
+                    
                     Row(verticalAlignment = Alignment.CenterVertically) {
-                        // Placeholder for truck icon
-                        Box(
-                            modifier = Modifier
-                                .size(20.dp)
-                                .clip(CircleShape)
-                                .background(GrayLight)
+                        Image(
+                            painter = painterResource(id = R.drawable.running_status),
+                            contentDescription = "Running Status",
+                            modifier = Modifier.size(24.dp)
                         )
-                        Spacer(modifier = Modifier.width(6.dp))
+                        Spacer(modifier = Modifier.width(10.dp))
                         Text(
                             text = runningStatus,
                             style = MaterialTheme.typography.bodyMedium,
                             color = GrayMedium
                         )
                     }
-                    Spacer(modifier = Modifier.height(6.dp))
+                    Spacer(modifier = Modifier.height(4.dp))
+                    
                     Row(verticalAlignment = Alignment.CenterVertically) {
-                        // Placeholder for battery icon
-                        Box(
-                            modifier = Modifier
-                                .size(20.dp)
-                                .clip(CircleShape)
-                                .background(GrayLight)
+                        Image(
+                            painter = painterResource(id = R.drawable.charging),
+                            contentDescription = "Battery",
+                            modifier = Modifier.size(24.dp)
                         )
-                        Spacer(modifier = Modifier.width(6.dp))
+                        Spacer(modifier = Modifier.width(10.dp))
                         Text(
                             text = batteryPercent,
                             style = MaterialTheme.typography.bodyMedium,
                             color = GrayMedium
                         )
                     }
-                    Spacer(modifier = Modifier.height(6.dp))
+                    Spacer(modifier = Modifier.height(4.dp))
+                    
                     Row(verticalAlignment = Alignment.CenterVertically) {
-                        // Placeholder for voltage icon
-                        Box(
-                            modifier = Modifier
-                                .size(20.dp)
-                                .clip(CircleShape)
-                                .background(GrayLight)
+                        Image(
+                            painter = painterResource(id = R.drawable.battery),
+                            contentDescription = "Voltage",
+                            modifier = Modifier.size(24.dp)
                         )
-                        Spacer(modifier = Modifier.width(6.dp))
+                        Spacer(modifier = Modifier.width(10.dp))
                         Text(
                             text = voltage,
                             style = MaterialTheme.typography.bodyMedium,
                             color = GrayMedium
                         )
                     }
-                    Spacer(modifier = Modifier.height(6.dp))
+                    Spacer(modifier = Modifier.height(4.dp))
+                    
                     Row(verticalAlignment = Alignment.CenterVertically) {
-                        // Placeholder for location icon
-                        Box(
-                            modifier = Modifier
-                                .size(20.dp)
-                                .clip(CircleShape)
-                                .background(OrangePrimary)
+                        Image(
+                            painter = painterResource(id = R.drawable.location),
+                            contentDescription = "Location",
+                            modifier = Modifier.size(22.dp)
                         )
-                        Spacer(modifier = Modifier.width(6.dp))
+                        Spacer(modifier = Modifier.width(10.dp))
                         Text(
                             text = address,
                             style = MaterialTheme.typography.bodyMedium,
                             color = GrayMedium,
-                            maxLines = 1,
+                            maxLines = 2,
                             overflow = TextOverflow.Ellipsis
                         )
                     }
-                    Spacer(modifier = Modifier.height(6.dp))
+                    Spacer(modifier = Modifier.height(4.dp))
+                    
                     Row(verticalAlignment = Alignment.CenterVertically) {
-                        // Placeholder for GPS icon
-                        Box(
-                            modifier = Modifier
-                                .size(20.dp)
-                                .clip(CircleShape)
-                                .background(GrayLight)
+                        Image(
+                            painter = painterResource(id = R.drawable.gps),
+                            contentDescription = "GPS Status",
+                            modifier = Modifier.size(24.dp)
                         )
-                        Spacer(modifier = Modifier.width(6.dp))
+                        Spacer(modifier = Modifier.width(10.dp))
                         Text(
                             text = gpsStatus,
                             style = MaterialTheme.typography.bodyMedium,
@@ -137,47 +147,61 @@ fun FleetCard(
                         )
                     }
                 }
+                
                 Spacer(modifier = Modifier.width(8.dp))
-                // Placeholder for truck image
-                Box(
+                
+                // Truck image
+                Image(
+                    painter = painterResource(id = R.drawable.status_truck),
+                    contentDescription = "Vehicle",
                     modifier = Modifier
-                        .size(width = 100.dp, height = 90.dp)
-                        .clip(RoundedCornerShape(12.dp))
-                        .background(GrayLight)
+                        .size(width = 120.dp, height = 110.dp)
+                        .clip(RoundedCornerShape(12.dp)),
+                    contentScale = ContentScale.Fit
                 )
             }
+            
             // Action buttons (bottom right)
             Row(
                 modifier = Modifier
                     .align(Alignment.BottomEnd)
-                    .padding(top = 120.dp),
-                horizontalArrangement = Arrangement.spacedBy(8.dp)
+                    .padding(top = 140.dp),
+                horizontalArrangement = Arrangement.spacedBy(10.dp)
             ) {
-                IconButton(onClick = { /* TODO: Power action */ }) {
-                    // Placeholder for power icon
-                    Box(
-                        modifier = Modifier
-                            .size(28.dp)
-                            .clip(CircleShape)
-                            .background(Color(0xFFF44336))
+                Box(
+                    modifier = Modifier
+                        .size(32.dp)
+                        .clip(CircleShape),
+                    contentAlignment = Alignment.Center
+                ) {
+                    Image(
+                        painter = painterResource(id = R.drawable.power),
+                        contentDescription = "Power",
+                        modifier = Modifier.size(24.dp),
                     )
                 }
-                IconButton(onClick = { /* TODO: AC action */ }) {
-                    // Placeholder for AC icon
-                    Box(
-                        modifier = Modifier
-                            .size(28.dp)
-                            .clip(CircleShape)
-                            .background(Color(0xFF2196F3))
+                Box(
+                    modifier = Modifier
+                        .size(32.dp)
+                        .clip(CircleShape),
+                    contentAlignment = Alignment.Center
+                ) {
+                    Image(
+                        painter = painterResource(id = R.drawable.ignition),
+                        contentDescription = "Ignition",
+                        modifier = Modifier.size(24.dp),
                     )
                 }
-                IconButton(onClick = { /* TODO: Settings action */ }) {
-                    // Placeholder for settings icon
-                    Box(
-                        modifier = Modifier
-                            .size(28.dp)
-                            .clip(CircleShape)
-                            .background(Color(0xFF4CAF50))
+                Box(
+                    modifier = Modifier
+                        .size(32.dp)
+                        .clip(CircleShape),
+                    contentAlignment = Alignment.Center
+                ) {
+                    Image(
+                        painter = painterResource(id = R.drawable.temp_status),
+                        contentDescription = "Temperature",
+                        modifier = Modifier.size(24.dp),
                     )
                 }
             }

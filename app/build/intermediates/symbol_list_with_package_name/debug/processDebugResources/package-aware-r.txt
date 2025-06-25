@@ -3055,6 +3055,7 @@ drawable alert
 drawable avd_hide_password
 drawable avd_show_password
 drawable banner
+drawable battery
 drawable breakdown
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
@@ -3065,6 +3066,7 @@ drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
 drawable button_background_orange
+drawable charging
 drawable circle_background
 drawable cogs2
 drawable common_full_open_on_phone
@@ -3099,6 +3101,7 @@ drawable fuel_drain
 drawable general_truck
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
+drawable gps
 drawable gtg
 drawable hino_500
 drawable hourglass
@@ -3129,11 +3132,13 @@ drawable ic_notifications
 drawable ic_person
 drawable ic_search_black_24
 drawable ic_visibility_off
+drawable ignition
 drawable indeterminate_static
 drawable input_background
 drawable isuzu
 drawable isuzu_4wd_truck_sml
 drawable keypad_button_background
+drawable location
 drawable m3_avd_hide_password
 drawable m3_avd_show_password
 drawable m3_bottom_sheet_drag_handle
@@ -3215,15 +3220,19 @@ drawable onboard_img2
 drawable onboard_img3
 drawable otp_input_background
 drawable otp_input_selected
+drawable power
 drawable pp
 drawable pvt
 drawable running
+drawable running_status
 drawable splash_screen
 drawable status
+drawable status_truck
 drawable stay_away
 drawable stay_away_zone
 drawable stay_in_zone
 drawable temp
+drawable temp_status
 drawable test_level_drawable
 drawable tooltip_frame_dark
 drawable tooltip_frame_light

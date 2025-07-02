@@ -8,4 +8,6 @@
     <color name="gray_dark">#424242</color>
     <color name="gray_border">#E0E0E0</color>
     <color name="orange_light">#FFCCBC</color>
+    <color name="input_bg">#FFFFFFFF</color>
+    <color name="otp_border">#E0E0E0</color>
 </resources>

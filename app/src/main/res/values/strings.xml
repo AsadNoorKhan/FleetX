@@ -18,7 +18,7 @@
     <string name="name">Name</string>
     <string name="register_with_email">Register with Email</string>
     <string name="name_hint">Ex: John Doe</string>
-    <string name="email_hint">Ex:coffee@gmail.com</string>
+    <string name="email_hint">coffee@gmail.com</string>
     
     <!-- OTP Verification Screen -->
     <string name="verification">Verification</string>
@@ -43,4 +43,11 @@
     <!-- Common -->
     <string name="back">Back</string>
     <string name="next">Next</string>
+    
+    <!-- New string resources -->
+    <string name="email_icon">Email icon</string>
+    <string name="password_icon">Password icon</string>
+    <string name="toggle_password_visibility">Toggle password visibility</string>
+    <string name="back_button">Back button</string>
+    <string name="notifications">Notifications</string>
 </resources>

@@ -31,7 +31,7 @@ sealed class MainNavItem(val label: String, val iconRes: Int) {
     object Home : MainNavItem("Home", R.drawable.ic_launcher_foreground) // Replace with real icon
     object Placeholder1 : MainNavItem("Tab 2", R.drawable.ic_launcher_foreground)
     object FleetStatus : MainNavItem("Fleet Status", R.drawable.ic_launcher_foreground)
-    object Placeholder2 : MainNavItem("Tab 4", R.drawable.ic_launcher_foreground)
+    object Report : MainNavItem("Reports", R.drawable.ic_launcher_foreground) // Use a real icon for reports
     object Settings : MainNavItem("Settings", R.drawable.ic_launcher_foreground)
 }
 
@@ -65,7 +65,7 @@ fun MainScreen() {
                     MainNavItem.Home,
                     MainNavItem.Placeholder1,
                     MainNavItem.FleetStatus,
-                    MainNavItem.Placeholder2,
+                    MainNavItem.Report,
                     MainNavItem.Settings
                 )
                 items.forEach { item ->
@@ -86,17 +86,13 @@ fun MainScreen() {
             }
         }
     ) { innerPadding ->
-        Box(
-            modifier = Modifier
-                .fillMaxSize()
-                .padding(innerPadding)
-        ) {
+        Box(modifier = Modifier.padding(innerPadding)) {
             when (selectedItem) {
-                is MainNavItem.Home -> HomeScreen()
-     //           is MainNavItem.Placeholder1 -> MapScreen()
-                is MainNavItem.FleetStatus -> FleetStatusScreen()
-                is MainNavItem.Settings -> SettingsScreen()
-                else -> Box(modifier = Modifier.fillMaxSize())
+                MainNavItem.Home -> HomeScreen()
+                MainNavItem.FleetStatus -> FleetStatusScreen()
+                MainNavItem.Report -> com.valsgroup.fleetx.screens.ReportScreen()
+                MainNavItem.Settings -> SettingsScreen()
+                else -> {/* Placeholder screens */}
             }
         }
     }

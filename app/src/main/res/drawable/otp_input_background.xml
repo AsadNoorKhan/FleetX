@@ -4,8 +4,8 @@
     <corners android:radius="12dp" />
     <stroke
         android:width="2dp"
-        android:color="@color/gray_border" />
-    <solid android:color="@color/white" />
+        android:color="@color/otp_border" />
+    <solid android:color="@color/input_bg" />
     <size
         android:width="60dp"
         android:height="60dp" />

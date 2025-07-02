@@ -21,10 +21,10 @@ class SplashActivity : ComponentActivity() {
                         NavigationManager.navigateToOnboarding(context)
                     }
                     NavigationManager.isLoggedIn(context) -> {
-                        NavigationManager.navigateToMainScreen(context)
+                    NavigationManager.navigateToMainScreen(context)
                     }
                     else -> {
-                        NavigationManager.navigateToAuth(context)
+                    NavigationManager.navigateToAuth(context)
                     }
                 }
             }

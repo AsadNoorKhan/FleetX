@@ -13,6 +13,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.valsgroup.fleetx.components.FleetCard
@@ -34,7 +35,7 @@ fun FleetStatusScreen(
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color.White)
+            .background(MaterialTheme.colorScheme.background)
             .padding(horizontal = 12.dp, vertical = 8.dp)
     ) {
         // Top header
@@ -52,13 +53,13 @@ fun FleetStatusScreen(
                     .background(Color.Transparent),
                 contentAlignment = Alignment.Center
             ) {
-                Text("≡", fontSize = 28.sp, color = Color.Black)
+                Text("≡", fontSize = 28.sp, color = MaterialTheme.colorScheme.onSurface)
             }
             Spacer(modifier = Modifier.width(8.dp))
             Text(
                 text = "Status Indus Dashboard",
                 style = MaterialTheme.typography.titleLarge.copy(fontSize = 22.sp),
-                color = Color.Black,
+                color = MaterialTheme.colorScheme.onSurface,
                 modifier = Modifier.weight(1f)
             )
             // Notification icon placeholder
@@ -66,10 +67,15 @@ fun FleetStatusScreen(
                 modifier = Modifier
                     .size(32.dp)
                     .clip(CircleShape)
-                    .background(Color.Transparent),
+                    .background(MaterialTheme.colorScheme.surfaceVariant),
                 contentAlignment = Alignment.Center
             ) {
-                Text("🔔", fontSize = 20.sp)
+                Text(
+                    text = "🔔",
+                    fontSize = 20.sp,
+                    color = MaterialTheme.colorScheme.onSurface,
+                    textAlign = TextAlign.Center
+                )
             }
         }
         Spacer(modifier = Modifier.height(8.dp))

@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white">
+    android:background="?android:attr/colorBackground">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -15,9 +15,11 @@
             android:id="@+id/backButton"
             android:layout_width="48dp"
             android:layout_height="48dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="32dp"
             android:background="@drawable/circle_background"
             android:src="@drawable/ic_arrow_back"
+            app:tint="?android:attr/textColorPrimary"
+            android:contentDescription="@string/back_button"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -26,9 +28,11 @@
             android:id="@+id/notificationButton"
             android:layout_width="48dp"
             android:layout_height="48dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="32dp"
             android:background="@drawable/circle_background"
             android:src="@drawable/ic_notifications"
+            app:tint="?android:attr/textColorPrimary"
+            android:contentDescription="@string/notifications"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -39,7 +43,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:text="@string/verification"
-            android:textColor="@color/black"
+            android:textColor="?android:attr/textColorPrimary"
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -53,7 +57,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="48dp"
             android:text="@string/otp_title"
-            android:textColor="@color/black"
+            android:textColor="?android:attr/textColorPrimary"
             android:textSize="28sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
@@ -66,7 +70,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="@string/otp_subtitle"
-            android:textColor="@color/gray_medium"
+            android:textColor="?android:attr/textColorSecondary"
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -90,11 +94,10 @@
                 android:layout_marginEnd="12dp"
                 android:background="@drawable/otp_input_background"
                 android:gravity="center"
-                android:hint="@string/otp_digit_1"
                 android:importantForAutofill="no"
                 android:inputType="number"
                 android:maxLength="1"
-                android:textColor="@color/black"
+                android:textColor="?android:attr/textColorPrimary"
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
@@ -105,11 +108,10 @@
                 android:layout_marginEnd="12dp"
                 android:background="@drawable/otp_input_background"
                 android:gravity="center"
-                android:hint="@string/otp_digit_2"
                 android:importantForAutofill="no"
                 android:inputType="number"
                 android:maxLength="1"
-                android:textColor="@color/black"
+                android:textColor="?android:attr/textColorPrimary"
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
@@ -120,11 +122,10 @@
                 android:layout_marginEnd="12dp"
                 android:background="@drawable/otp_input_background"
                 android:gravity="center"
-                android:hint="@string/otp_digit_3"
                 android:importantForAutofill="no"
                 android:inputType="number"
                 android:maxLength="1"
-                android:textColor="@color/black"
+                android:textColor="?android:attr/textColorPrimary"
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
@@ -134,11 +135,10 @@
                 android:layout_height="60dp"
                 android:background="@drawable/otp_input_background"
                 android:gravity="center"
-                android:hint="@string/otp_digit_4"
                 android:importantForAutofill="no"
                 android:inputType="number"
                 android:maxLength="1"
-                android:textColor="@color/black"
+                android:textColor="?android:attr/textColorPrimary"
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
@@ -151,7 +151,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:text="@string/didnt_receive_email"
-            android:textColor="@color/black"
+            android:textColor="@color/orange_primary"
             android:textSize="14sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/otpContainer" />
@@ -218,9 +218,9 @@
                     android:layout_marginHorizontal="4dp"
                     android:layout_weight="1"
                     android:background="@drawable/keypad_button_background"
-                    android:text="2\nABC"
+                    android:text="2"
                     android:textColor="@color/black"
-                    android:textSize="16sp" />
+                    android:textSize="20sp" />
 
                 <Button
                     android:id="@+id/btn3"
@@ -229,9 +229,9 @@
                     android:layout_marginStart="4dp"
                     android:layout_weight="1"
                     android:background="@drawable/keypad_button_background"
-                    android:text="3\nDEF"
+                    android:text="3"
                     android:textColor="@color/black"
-                    android:textSize="16sp" />
+                    android:textSize="20sp" />
 
             </LinearLayout>
 
@@ -249,9 +249,9 @@
                     android:layout_marginEnd="4dp"
                     android:layout_weight="1"
                     android:background="@drawable/keypad_button_background"
-                    android:text="4\nGHI"
+                    android:text="4"
                     android:textColor="@color/black"
-                    android:textSize="16sp" />
+                    android:textSize="20sp" />
 
                 <Button
                     android:id="@+id/btn5"
@@ -260,9 +260,9 @@
                     android:layout_marginHorizontal="4dp"
                     android:layout_weight="1"
                     android:background="@drawable/keypad_button_background"
-                    android:text="5\nJKL"
+                    android:text="5"
                     android:textColor="@color/black"
-                    android:textSize="16sp" />
+                    android:textSize="20sp" />
 
                 <Button
                     android:id="@+id/btn6"
@@ -271,9 +271,9 @@
                     android:layout_marginStart="4dp"
                     android:layout_weight="1"
                     android:background="@drawable/keypad_button_background"
-                    android:text="6\nMNO"
+                    android:text="6"
                     android:textColor="@color/black"
-                    android:textSize="16sp" />
+                    android:textSize="20sp" />
 
             </LinearLayout>
 
@@ -291,9 +291,9 @@
                     android:layout_marginEnd="4dp"
                     android:layout_weight="1"
                     android:background="@drawable/keypad_button_background"
-                    android:text="7\nPQRS"
+                    android:text="7"
                     android:textColor="@color/black"
-                    android:textSize="16sp" />
+                    android:textSize="20sp" />
 
                 <Button
                     android:id="@+id/btn8"
@@ -302,9 +302,9 @@
                     android:layout_marginHorizontal="4dp"
                     android:layout_weight="1"
                     android:background="@drawable/keypad_button_background"
-                    android:text="8\nTUV"
+                    android:text="8"
                     android:textColor="@color/black"
-                    android:textSize="16sp" />
+                    android:textSize="20sp" />
 
                 <Button
                     android:id="@+id/btn9"
@@ -313,9 +313,9 @@
                     android:layout_marginStart="4dp"
                     android:layout_weight="1"
                     android:background="@drawable/keypad_button_background"
-                    android:text="9\nWXYZ"
+                    android:text="9"
                     android:textColor="@color/black"
-                    android:textSize="16sp" />
+                    android:textSize="20sp" />
 
             </LinearLayout>
 
@@ -326,16 +326,11 @@
                 android:layout_marginTop="8dp"
                 android:orientation="horizontal">
 
-                <Button
-                    android:id="@+id/btnDot"
+                <View
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_marginEnd="4dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/keypad_button_background"
-                    android:text="."
-                    android:textColor="@color/black"
-                    android:textSize="20sp" />
+                    android:layout_weight="1" />
 
                 <Button
                     android:id="@+id/btn0"

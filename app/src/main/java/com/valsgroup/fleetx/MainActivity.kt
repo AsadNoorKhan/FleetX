@@ -23,16 +23,16 @@ import com.valsgroup.fleetx.navigation.NavigationManager
 import com.valsgroup.fleetx.screens.HomeScreen
 import com.valsgroup.fleetx.screens.FleetStatusScreen
 import com.valsgroup.fleetx.screens.SettingsScreen
-//import com.valsgroup.fleetx.screens.MapScreen
+import com.valsgroup.fleetx.screens.MapScreen
 import com.valsgroup.fleetx.ui.theme.FleetXTheme
 import com.valsgroup.fleetx.R
 
 sealed class MainNavItem(val label: String, val iconRes: Int) {
-    object Home : MainNavItem("Home", R.drawable.ic_launcher_foreground) // Replace with real icon
-    object Placeholder1 : MainNavItem("Tab 2", R.drawable.ic_launcher_foreground)
-    object FleetStatus : MainNavItem("Fleet Status", R.drawable.ic_launcher_foreground)
-    object Report : MainNavItem("Reports", R.drawable.ic_launcher_foreground) // Use a real icon for reports
-    object Settings : MainNavItem("Settings", R.drawable.ic_launcher_foreground)
+    object Home : MainNavItem("Home", R.drawable.nav_home)
+    object Map : MainNavItem("Map", R.drawable.nav_map)
+    object FleetStatus : MainNavItem("Fleet Status", R.drawable.nav_status)
+    object Report : MainNavItem("Reports", R.drawable.nav_report)
+    object Settings : MainNavItem("Settings", R.drawable.nav_settings)
 }
 
 class MainActivity : ComponentActivity() {
@@ -63,7 +63,7 @@ fun MainScreen() {
             NavigationBar {
                 val items = listOf(
                     MainNavItem.Home,
-                    MainNavItem.Placeholder1,
+                    MainNavItem.Map,
                     MainNavItem.FleetStatus,
                     MainNavItem.Report,
                     MainNavItem.Settings
@@ -89,6 +89,7 @@ fun MainScreen() {
         Box(modifier = Modifier.padding(innerPadding)) {
             when (selectedItem) {
                 MainNavItem.Home -> HomeScreen()
+                MainNavItem.Map -> MapScreen()
                 MainNavItem.FleetStatus -> FleetStatusScreen()
                 MainNavItem.Report -> com.valsgroup.fleetx.screens.ReportScreen()
                 MainNavItem.Settings -> SettingsScreen()

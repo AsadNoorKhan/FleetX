@@ -3,6 +3,8 @@ package com.valsgroup.fleetx.components
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -19,6 +21,7 @@ import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -29,7 +32,13 @@ import androidx.compose.ui.unit.sp
 import com.valsgroup.fleetx.ui.theme.GrayDark
 
 @Composable
-fun FleetFuelMini(modifier: Modifier = Modifier, painter: Painter) {
+fun FleetFuelMini(
+    modifier: Modifier = Modifier, 
+    painter: Painter,
+    onClick: (() -> Unit)? = null
+) {
+    val interactionSource = remember { MutableInteractionSource() }
+    
     Card(
         modifier = modifier
             .width(120.dp)
@@ -38,6 +47,16 @@ fun FleetFuelMini(modifier: Modifier = Modifier, painter: Painter) {
                 width = 1.dp,
                 color = GrayDark, // Match FleetStatusMini border color
                 shape = RoundedCornerShape(12.dp)
+            )
+            .then(
+                if (onClick != null) {
+                    Modifier.clickable(
+                        interactionSource = interactionSource,
+                        indication = null
+                    ) { onClick() }
+                } else {
+                    Modifier
+                }
             ),
         shape = RoundedCornerShape(12.dp),
         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
